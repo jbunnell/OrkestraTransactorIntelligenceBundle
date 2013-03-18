@@ -11,7 +11,8 @@
   ],
   "require": {
     "php": ">=5.3.3",
-    "orkestra/transactor-bundle": "1.0.*"
+    "orkestra/transactor-bundle": "1.0.*",
+    "orkestra/application-bundle": "dev-develop"
   },
   "autoload": {
     "psr-0": { "Orkestra\\Bundle\\TransactorIntelligenceBundle": "" }
