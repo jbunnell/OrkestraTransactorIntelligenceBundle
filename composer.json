@@ -1,13 +1,20 @@
 {
-    "name": "orkestra/transactor-intelligence-bundle",
-    "license": "mit",
-    "authors": [
-        {
-            "name": "Peter Bunnell",
-            "email": "jpeterbunnell@gmail.com"
-        }
-    ],
-    "require": {
-
+  "name": "orkestra/transactor-intelligence-bundle",
+  "description": "Adds basic reporting and search for transactor bundle.",
+  "type": "symfony-bundle",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "Peter Bunnell",
+      "email": "jpeterbunnell@gmail.com"
     }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "orkestra/transactor-bundle": "1.0.*"
+  },
+  "autoload": {
+    "psr-0": { "Orkestra\\Bundle\\TransactorIntelligenceBundle": "" }
+  },
+  "target-dir": "Orkestra/Bundle/TransactorIntelligenceBundle"
 }
