@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Search Transactions{% endblock %}
+
+{% block content %}
+    <form action="{{ path('transaction_search') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_rest(form) }}
+    <button type="submit" class="btn btn-primary">Search Transactions</button>
+
+</form>
+{% endblock %}

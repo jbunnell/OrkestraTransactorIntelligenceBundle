@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}SearchResults {% endblock %}
+
+{% block content %}
+    <form action="{{ path('transaction_search') }}" method="post" {{ form_enctype(form) }}>
+    {{ form_rest(form) }}
+        <button type="submit" class="btn btn-primary">Search Transactions</button>
+
+</form>
+{% if transactions|length > 0 %}
+<table class="table records_list">
+    <thead>
+        <tr>
+            <th>Transaction ID</th>
+            <th>Transaction Type</th>
+            <th>Transaction Amount</th>
+            <th>Transaction Status</th>
+            <th>Transaction Network</th>
+            <th>Transaction Date</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for transaction in transactions%}
+        <tr>
+            <td>{{ transaction.id }}</td>
+            <td>{{ transaction.type }}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.status }}</td>
+            <td>{{ transaction.network }}</td>
+            <td>{{ transaction.result.dateTransacted }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+{% endblock %}
