@@ -1,0 +1,13 @@
+{
+    "name": "orkestra/transactor-intelligence-bundle",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Peter Bunnell",
+            "email": "jpeterbunnell@gmail.com"
+        }
+    ],
+    "require": {
+
+    }
+}
